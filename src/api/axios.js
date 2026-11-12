@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000"||"http://request-hub-backend-production.up.railway.app",
+  baseURL: import.meta.env.VITE_API_URL || "https://railway.app",
 });
 export const authHeader = () => {
   const token = localStorage.getItem("accessToken");
